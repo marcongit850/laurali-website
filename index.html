@@ -7,88 +7,187 @@
     <title>Laurali Douglass</title>
     <meta name="description" content="Official website of Laurali Douglass.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
         }
 
         body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7f9;
-            color: #24323a;
+            font-family: "DM Sans", sans-serif;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,.10), transparent 35%),
+                linear-gradient(135deg, #102f3b 0%, #184c59 50%, #1e6a70 100%);
+            color: white;
         }
 
-        .hero {
+        .page {
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 6%;
+        }
+
+        .logo {
+            width: 54px;
+            height: 54px;
+            border: 1px solid rgba(255,255,255,.45);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Playfair Display", serif;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        .name-small {
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: .75;
+        }
+
+        main {
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 24px 120px;
         }
 
-        .content {
-            max-width: 750px;
+        .hero {
+            max-width: 950px;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 13px;
+            font-weight: 600;
+            opacity: .7;
+            margin-bottom: 28px;
         }
 
         h1 {
-            font-size: clamp(48px, 8vw, 72px);
-            margin: 0 0 18px;
-            color: #173b4c;
-            letter-spacing: -2px;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(58px, 9vw, 110px);
+            line-height: .95;
+            letter-spacing: -3px;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            width: 65px;
+            height: 2px;
+            background: rgba(255,255,255,.65);
+            margin: 0 auto 30px;
         }
 
         .tagline {
-            font-size: 22px;
-            color: #55717d;
-            margin-bottom: 35px;
+            font-size: clamp(18px, 2vw, 24px);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 400;
+            opacity: .9;
         }
 
-        .line {
-            width: 60px;
-            height: 4px;
-            background: #2c7b79;
-            margin: 0 auto 35px;
-            border-radius: 3px;
+        .intro {
+            max-width: 570px;
+            margin: 32px auto 0;
+            font-size: 17px;
+            line-height: 1.8;
+            color: rgba(255,255,255,.7);
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #53636a;
+        footer {
+            padding: 25px 6%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: rgba(255,255,255,.45);
+            letter-spacing: 1px;
         }
 
-        .location {
-            margin-top: 35px;
-            font-size: 15px;
-            color: #84939a;
+        @media (max-width: 600px) {
+            header {
+                padding: 25px;
+            }
+
+            .name-small {
+                display: none;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            footer {
+                justify-content: center;
+            }
+
+            footer span:last-child {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <div class="content">
+<div class="page">
 
-        <h1>Laurali Douglass</h1>
+    <header>
+        <div class="logo">LD</div>
+        <div class="name-small">Laurali Douglass</div>
+    </header>
 
-        <div class="tagline">
-            Student · Athlete
-        </div>
+    <main>
+        <section class="hero">
 
-        <div class="line"></div>
+            <div class="eyebrow">
+                Official Website
+            </div>
 
-        <p>
-            Welcome to the official website of Laurali Douglass.
-        </p>
+            <h1>
+                Laurali<br>Douglass
+            </h1>
 
-        <div class="location">
-            Florida
-        </div>
+            <div class="divider"></div>
 
-    </div>
+            <div class="tagline">
+                Student · Athlete
+            </div>
+
+            <p class="intro">
+                Welcome to the official website of Laurali Douglass.
+                More coming soon.
+            </p>
+
+        </section>
+    </main>
+
+    <footer>
+        <span>© 2026 Laurali Douglass</span>
+        <span>lauralidouglass.com</span>
+    </footer>
+
 </div>
 
 </body>
